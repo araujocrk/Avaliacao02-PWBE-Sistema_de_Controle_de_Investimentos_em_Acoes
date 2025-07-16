@@ -1,0 +1,156 @@
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-chart-line text-blue-600 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-blue-600">Intellinvest</span>
+                </div>
+            </div>
+
+            <!-- Center Navigation -->
+            <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                <a href="/"
+                    class="<%= path === '/' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'%> px-3 py-2 rounded-md text-sm font-medium <%= path === '/' ? 'text-blue-600 border-b-2 border-blue-600' : '' %>">Home</a>
+
+                <!-- Operations Dropdown -->
+                <div class="dropdown relative">
+                    <button
+                        class="<%= path === '/operacoes' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'%> px-3 py-2 rounded-md text-sm font-medium flex items-center <%= path === '/operacoes' ? 'text-blue-600 border-b-2 border-blue-600' : '' %>">
+                        Operações
+                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu absolute mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                        <a href="/operacoes/nova-operacao"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Criar
+                            operação</a>
+                        <a href="/operacoes/visualizar"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Todas as suas
+                            operações</a>
+                        <a href="/operacoes/buscar-por-ativo"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Buscar operações por ativo</a>
+                        <a href="/operacoes/editar"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Editar
+                            operação</a>
+                        <a href="/operacoes/deletar-operacao"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Excluir
+                            operação</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Login Button -->
+            <div class="hidden md:ml-6 md:flex md:items-center">
+                <div class="dropdown relative">
+                    <button
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium flex items-center transition-all">
+                        <i class="fas fa-rocket mr-2"></i> Começar
+                    </button>
+                    <div
+                        class="dropdown-menu absolute hidden mt-2 right-0 w-32 bg-white rounded-md shadow-lg py-1 z-50">
+                        <a href="/user/login"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Login</a>
+                        <a href="/user/logout"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">Logout</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="-mr-2 flex items-center md:hidden">
+                <button type="button"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none"
+                    aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                    <span class="sr-only">Open main menu</span>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="hidden md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Home</a>
+
+            <div class="px-3 py-2">
+                <button
+                    class="w-full text-left text-gray-700 hover:text-blue-600 rounded-md text-base font-medium flex justify-between items-center"
+                    id="mobile-operations-button">
+                    Operações
+                    <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                </button>
+                <div class="hidden mt-2 pl-4 space-y-1" id="mobile-operations-menu">
+                    <a href="/operacoes/nova-operacao"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Criar
+                        operação</a>
+                    <a href="/operacoes/visualizar"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Todas
+                        as operações</a>
+                    <a href="/operacoes/buscar-por-ativo"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Buscar operações por ativo</a>
+                    <a href="/operacoes/editar"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Editar
+                        operação</a>
+                    <a href="/operacoes/deletar-operacao"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Excluir
+                        operação</a>
+                </div>
+            </div>
+
+            <div class="px-3 py-2">
+                <button
+                    class="w-full text-left text-gray-700 hover:text-blue-600 rounded-md text-base font-medium flex justify-between items-center"
+                    id="mobile-login-button">
+                    Começar
+                    <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                </button>
+                <div class="hidden mt-2 pl-4 space-y-1" id="mobile-login-menu">
+                    <a href="/user/login"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Login</a>
+                    <a href="/user/logout"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Dropdowns padrão (desktop)
+    document.querySelectorAll('.dropdown > button').forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
+
+            // Fecha outros dropdowns se quiser (opcional)
+            document.querySelectorAll('.dropdown').forEach(d => {
+                if (d !== dropdown) d.classList.remove('active');
+            });
+        });
+    });
+
+    // Fecha o dropdown ao clicar fora (opcional)
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+        }
+    });
+
+    // Menu mobile toggles
+    document.getElementById('mobile-operations-button')?.addEventListener('click', function () {
+        document.getElementById('mobile-operations-menu').classList.toggle('hidden');
+    });
+
+    document.getElementById('mobile-login-button')?.addEventListener('click', function () {
+        document.getElementById('mobile-login-menu').classList.toggle('hidden');
+    });
+
+    // Menu mobile principal
+    document.getElementById('mobile-menu-button')?.addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>

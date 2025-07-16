@@ -1,0 +1,138 @@
+main .container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main .logo h1 {
+    margin: 0 0 5px 0;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+main .logo p {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+main form#registerForm,
+main form#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+main .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+    font-size: 14px;
+}
+
+main .form-group input[type="text"],
+main .form-group input[type="email"],
+main .form-group input[type="password"] {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1.5px solid #bdc3c7;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+main .form-group input[type="text"]:focus,
+main .form-group input[type="email"]:focus,
+main .form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #2980b9;
+}
+
+main .error-message {
+    margin-top: 3px;
+    font-size: 12px;
+    color: #e74c3c;
+    min-height: 16px;
+}
+
+main .password-strength {
+    margin-top: 5px;
+    height: 6px;
+    background-color: #ecf0f1;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+main .strength-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+main button.btn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #2980b9;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+main button.btn:hover {
+    background-color: #1f6391;
+}
+
+main .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+main .login-link a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a tela de login - links extras */
+main .extra-links {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #7f8c8d;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+main .extra-links a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main .extra-links a:hover {
+    text-decoration: underline;
+}
+
+main .extra-links p {
+    margin: 0;
+}

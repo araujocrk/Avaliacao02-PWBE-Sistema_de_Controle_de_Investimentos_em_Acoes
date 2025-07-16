@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellinvest - <%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+    .dropdown .dropdown-menu {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+</style>
+
+<body class="font-sans bg-gray-50">
+    <%if(header) { %>
+        <header>
+            <%- include('partials/header') %>
+        </header>
+        <% } %>
+        
+        <main>
+            <%- body %>
+        </main>
+
+        <% if(footer) { %>
+        <footer>
+            <%- include('partials/footer') %>
+        </footer>
+        <% } %>
+</body>
+
+</html>
