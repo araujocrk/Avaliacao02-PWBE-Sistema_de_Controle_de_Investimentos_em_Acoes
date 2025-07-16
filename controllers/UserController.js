@@ -10,7 +10,7 @@ exports.cadastroFormulario = (req, res) => {
 
 exports.cadastrar = (req, res, next) => {
     const user = new User(req.body);
-    user.validateUser;
+    user.validateUser();
     if (user.errors.length > 0) {
         return next(user.errors);
     }
