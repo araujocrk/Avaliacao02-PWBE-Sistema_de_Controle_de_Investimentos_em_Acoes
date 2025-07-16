@@ -75,7 +75,6 @@ Operacao.prototype.validate = function () {
 			id_operacao: id_operacao
 		}
 		this.data = validatedData;
-		console.log('Operação validada:', this.data);
 	}
 }
 

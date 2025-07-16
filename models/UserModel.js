@@ -90,7 +90,6 @@ User.prototype.validateSenha = function (senha) {
 
 User.prototype.create = function () {
     let salt = bcrypt.genSaltSync(10);
-    console.log(this.data.nome)
     const senha = bcrypt.hashSync(this.data.senha, salt);
     const sql = 'INSERT INTO usuarios (nome, email, senha) VALUES ($1, $2, $3) RETURNING id_usuario, nome, email';
     const values = [this.data.nome, this.data.email, senha];

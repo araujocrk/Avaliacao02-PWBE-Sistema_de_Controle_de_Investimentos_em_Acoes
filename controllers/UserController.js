@@ -42,7 +42,6 @@ exports.logar = (req, res, next) => {
                 nome: result.data.nome,
                 email: result.data.email
             }
-            console.log(req.session.user)
             return res.redirect('/operacoes/nova-operacao')
         })
         .catch(next)

@@ -33,7 +33,6 @@ exports.readAll = (req, res, next) => {
     const operacao = new Operacao({});
     operacao.readAll(id_usuario, limit)
         .then((result) => {
-            console.log(result)
             return res.render('pages/operacoes/visualizarOperacoes', {
                 title: 'Visualizar Operações',
                 path: '/operacoes',
